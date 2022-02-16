@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 DOM</title>
+    <style>
+        body{
+            background: black;
+            color:whitesmoke;
+        }
+        main{
+            width: 100%;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    
+  <main>
+        <h2>Some seus valores</h2>
+        <input type="number" name="textn1" id="textn1">+
+        <input type="number" name="textn2" id="textn2">
+        <input type="button" value="somar" onclick="somar()">
+        <div id="resultado">
+            Seu resultado.. 
+        </div>
+    </main>
+    
+</body>
+
+<script>
+    function somar(){
+         var tn1 = window.document.getElementById('textn1');
+         var tn2 = window.document.querySelector('input#textn2');
+         var resultado = window.document.getElementById('resultado');
+         var n1= Number(tn1.value);
+         var n2 = Number(tn2.value); 
+         var s = n1 + n2; 
+         resultado.innerHTML = s;
+
+    }
+
+</script>
+
+</html>
+
